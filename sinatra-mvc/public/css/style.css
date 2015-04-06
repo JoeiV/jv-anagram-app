@@ -1,0 +1,51 @@
+/*
+    Document   : anagrams/sinatra-mvc/public/style.css
+    Created on : 2015-04-02 04:08 PM
+    Author     : JoeiV
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+* {
+    background:#f8f8f8;
+	background:url('images/tiles-03.png');
+	font-family:'montserrat', arial;
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    font-size: 125%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 100px;
+    color: #ff0066;
+    font-weight: bold;
+}
+
+label {
+    font-style: italic;
+    font-size: large;
+    color: #434b4b;
+    clear: both;
+    width: 100%;
+}
+
+input.text-box {
+    font-size: large;
+    color: #434b4b;
+    clear: both;
+}
+
+input.btn {
+    color: #222626;
+    font-size: large;
+    background-color: #ff0066;
+    text-shadow: 2px 2px 4px #824d82; 
+    box-shadow: 3px 3px 5px 1px #858585;
+    clear: both;
+}
