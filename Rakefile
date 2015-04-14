@@ -3,7 +3,8 @@ require 'rspec/core/rake_task'
 require 'active_support'
 require 'active_support/core_ext'
 
-require_relative 'config'
+require ::File.expand_path('../app',  __FILE__)
+#require_relative 'config'
 
 namespace :db do
   desc "Drop, create, and migrate the database"
