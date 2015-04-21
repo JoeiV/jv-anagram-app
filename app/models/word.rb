@@ -1,6 +1,10 @@
-#require 'open-uri'
-
 class Word < ActiveRecord::Base
+    
+    def add_letters
+        characters = self.text.chars
+        alphabetized_characters = characters.sort
+        self.letters = alphabetized_characters.join
+    end
     
     def self.reverse_letters(letters)
         length = letters.length
@@ -31,6 +35,30 @@ class Word < ActiveRecord::Base
         
         Word.where("text in (?)", combinations)
     end 
-                
+    
+    def three_letters?(input)
+        if input.length = 3
+            true
+        else
+            false
+        end
+    end
+    
+    def distinct_letters?(input)
+        letter_array = input.chars
+        unique_letters = letter_array.uniq 
+        if unique_letters.length < letter_array.length
+            false
+        else
+            true
+        end
+    end
+ 
+    def valid_input(input)
+      if input.length > 3
+         raise Exception.new("Word must be less than or equal to 3 characters.")
+      end
+    end
 
 end
+

@@ -73,3 +73,8 @@ li.show {
     list-style-type: none;
     padding: 20px;
 }
+
+p.error {
+    color: red;
+    font-weight: bold;
+}
