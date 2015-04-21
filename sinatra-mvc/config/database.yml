@@ -1,0 +1,20 @@
+production:
+  url: <%= ENV['DATABASE_URL'] %>
+
+development:
+  adapter: postgresql
+  database: anagram_development
+  pool: 5
+  host: localhost
+  username: codio
+  password: 
+  template: template0
+    
+test:
+  adapter: postgresql
+  database: anagram_test
+  pool: 5
+  host: localhost
+  username: codio
+  password: 
+  template: template0
