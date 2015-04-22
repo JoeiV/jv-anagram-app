@@ -5,7 +5,7 @@ require 'active_support/core_ext'
 
 require ::File.expand_path('../app',  __FILE__)
 #require_relative 'config'
-
+#
 namespace :db do
   desc "Drop, create, and migrate the database"
   task :reset => [:drop, :create, :migrate]
