@@ -22,3 +22,9 @@ post '/' do
         erb :index
     end
 end
+
+def valid_input(input)
+      if input.length > 3
+         raise Exception.new("Word must be less than or equal to 3 characters.")
+      end
+    end

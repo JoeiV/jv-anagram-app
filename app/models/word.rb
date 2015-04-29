@@ -31,7 +31,7 @@ class Word < ActiveRecord::Base
         combinations << letter + reverse_letters(remaining).join('')
             
         end
-        combinations.permutation(&:join).map
+        combinations.permutation.map(&:join)
         
         Word.where("text in (?)", combinations)
     end 
