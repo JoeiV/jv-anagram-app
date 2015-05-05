@@ -58,7 +58,17 @@ input.btn {
     margin: 10px;
 }
 
-.show {
+button {
+    color: #222626;
+    font-size: large;
+    background-color: #ff0066;
+    text-shadow: 2px 2px 4px #824d82; 
+    box-shadow: 3px 3px 5px 1px #858585;
+    border-style: 5px outset;
+    border-radius: 10px 5px / 5px 10px;
+    clear: both;
+    padding: 5px;
+    margin: 10px;
 }
 
 ul.show {
@@ -77,4 +87,10 @@ li.show {
 p.error {
     color: red;
     font-weight: bold;
+}
+
+p.new_word {
+    color: #ff0066;
+    font-weight: bold;
+    font-size: large;
 }

@@ -1,0 +1,11 @@
+<% if @error.present? %>
+    <p class='error'><%= "#{@error}" %></p>
+<% end %>
+
+<h1 class="new_word">Make a new anagram!</h1>
+
+<form action="/" method="post" class="new_word">
+  <input class="text-box" type="text" name="word" placeholder="Enter your word here"> <br>
+  <input type="submit" class="btn" value="Submit"> <br>
+    
+</form>
