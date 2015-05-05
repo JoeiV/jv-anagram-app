@@ -1,7 +1,3 @@
-<% if @error.present? %>
-  <p class='error'><%= "#{@error}" %></p>
-<% end %>
-
 <h1>Words</h1>
   <table class="table table-striped">
     <thead>
@@ -9,11 +5,13 @@
       <th>Letters</th>    
     </thead>
     <tbody>
-      <% "loop through @words here..." %>
+        <% if !@words.nil? %>
+        <% @words.each do |word| %>
         <tr>
-          <td>(print the text here)</td>
-          <td>(print letters here)</td>        
+            <td> <%= "#{word.text}" %>  </td>
+            <td> <%= "#{word.letters}" %>  </td>
+        <% end %>
         </tr>
-      <% end %>
+    <% end %>
     </tbody>
   </table>

@@ -3,7 +3,7 @@
 <ul class="show">
     <% if !@anagrams.nil? %>
         <% @anagrams.each do |anagram| %>
-            <li class="show"> <a href=" <%= "/anagrams/#{anagram.text}" %>"><%= "#{anagram.text}" %></a>  </li>
+            <li class="show"> <%= "#{anagram.text}" %>  </li>
         <% end %>
     <% end %>
 </ul> 
