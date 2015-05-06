@@ -1,0 +1,20 @@
+<% if @error.present? %>
+    <p class='error'><%= "#{@error}" %></p>
+<% end %>
+
+
+<form action="<%= words_form_action(@word) %>" method="post" class="word-form" id="word-form">
+    
+    <input type="hidden" name="_method" value="<%= words_form_method(@word) %>">
+ <div class="form-group">
+     <label for="text" class="control-label">Word</label>
+     
+     <div>
+         
+  <input class="text-box" type="text" name="text" placeholder="Enter the word here" value="<%= @word.text %>" /> <br>
+        
+  <input type="submit" class="btn" value="Submit"> <br>
+     </div> 
+ </div>
+    
+</form>
