@@ -2,16 +2,20 @@
   <table class="table table-striped">
     <thead>
       <th>Text</th>
-      <th>Letters</th>    
+      <th>Letters</th>
     </thead>
     <tbody>
         <% if !@words.nil? %>
         <% @words.each do |word| %>
         <tr>
-            <td> <a href="<%= "/words/#{word.id}" %>"> <%= "#{word.text}" %> </a>  </td>
+            <td> <a href="<%= "/words/#{word.id}" %>"> <%= "#{word.text}" %> </a> </td>
             <td> <%= "#{word.letters}" %>  </td>
-            <td> <a href="<%= "/words/#{word.id}/edit" %>"> Edit </a>
-  </td>
+            <td> <a href="<%= "/words/#{word.id}/edit" %>"> <i class="fa fa-pencil"></i>Edit </a> </td>
+            <td> <form action="<%= "words/#{word.id}" %>" method="post">
+                <input type="hidden" name="_method" value="delete" />
+                <button class="btn btn-danger" type="submit">
+                    <i class="fa fa-trash-o fa-lg"></i>Delete</button>
+                </form></td>
         <% end %>
         </tr>
     <% end %>

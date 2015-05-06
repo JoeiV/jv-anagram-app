@@ -1,9 +1,10 @@
-<h1>Anagrams for <%= "#{@word}" %></h1>
+<h1>Anagrams for  <%= "#{@word}" %> </h1>
 <div class="show">
 <ul class="show">
     <% if !@anagrams.nil? %>
         <% @anagrams.each do |anagram| %>
-            <li class="show"> <%= "#{anagram.text}" %>  </li>
+            <li class="show"> <%= "#{anagram.text}" %> </li>
+            <li class="show"> <%= "#{anagram.letters}" %> </li>
         <% end %>
     <% end %>
 </ul> 
